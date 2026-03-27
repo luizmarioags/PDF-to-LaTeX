@@ -1,0 +1,357 @@
+\documentclass[12pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{setspace}
+\usepackage{indentfirst}
+
+\setstretch{1.15}
+
+\title{Modelos de Ciclos Reais de Negócios: Passado, Presente e Futuro \thanks{Texto Traduzido livremente por Luiz Mario Andrade com o auxílio da ferramenta Chat GPT 5.4}}
+\author{Sergio Rebelo}
+\date{Junho de 2005}
+
+\begin{document}
+
+\maketitle
+
+\begin{center}
+SÉRIE DE TEXTOS PARA DISCUSSÃO DO NBER
+
+\vspace{1cm}
+
+Sergio Rebelo
+
+Texto para Discussão 11401 \\
+http://www.nber.org/papers/w11401
+
+NATIONAL BUREAU OF ECONOMIC RESEARCH \\
+1050 Massachusetts Avenue \\
+Cambridge, MA 02138 \\
+Junho de 2005
+\end{center}
+
+\vspace{1cm}
+
+Agradeço a Martin Eichenbaum, Nir Jaimovich, Bob King e Per Krusell por seus comentários, a Lyndon Moore e Yuliya Meshcheryakova pela assistência de pesquisa, e à National Science Foundation pelo apoio financeiro. As opiniões aqui expressas são as do(s) autor(es) e não refletem necessariamente as visões do National Bureau of Economic Research.
+
+©2005 por Sergio Rebelo. Todos os direitos reservados. Curtas seções de texto, não excedendo dois parágrafos, podem ser citadas sem permissão explícita, desde que o crédito total, incluindo o aviso ©, seja dado à fonte.
+
+\newpage
+
+\begin{center}
+\textbf{RESUMO}
+\end{center}
+
+Neste artigo, reviso a contribuição dos modelos de ciclos reais de negócios para a nossa compreensão das flutuações econômicas e discuto questões em aberto na pesquisa sobre ciclos de negócios.
+
+\vspace{1cm}
+
+Sergio Rebelo \\
+Kellogg Graduate School of Management \\
+Northwestern University \\
+Leverone Hall \\
+Evanston, IL 60208-2001 \\
+e NBER \\
+s-rebelo@northwestern.edu
+
+\newpage
+
+\section{Introdução}
+
+Finn Kydland e Edward Prescott introduziram não uma, mas três ideias revolucionárias em seu artigo de 1982, “Time to Build and Aggregate Fluctuations”. A primeira ideia, que se baseia em trabalhos anteriores de Lucas e Prescott (1971), é que os ciclos de negócios podem ser estudados usando modelos de equilíbrio geral dinâmico. Esses modelos apresentam agentes atomísticos que operam em mercados competitivos e formam expectativas racionais sobre o futuro. A segunda ideia é que é possível unificar a teoria do ciclo de negócios e a do crescimento, insistindo que os modelos de ciclos de negócios devem ser consistentes com as regularidades empíricas do crescimento de longo prazo. A terceira ideia é que podemos ir muito além da comparação qualitativa das propriedades dos modelos com fatos estilizados que dominaram o trabalho teórico em macroeconomia até 1982. Podemos calibrar modelos com parâmetros extraídos, na medida do possível, de estudos microeconômicos e propriedades de longo prazo da economia, e podemos usar esses modelos calibrados para gerar dados artificiais que podemos comparar com os dados reais.
+
+Não é de surpreender que um artigo com tantas ideias novas tenha moldado a agenda de pesquisa macroeconômica das últimas duas décadas. A onda de modelos que seguiu inicialmente o trabalho de Kydland e Prescott (1982) foi referida como modelos de “ciclo real de negócios” devido à sua ênfase no papel dos choques reais, particularmente os choques de tecnologia, na condução das flutuações comerciais. Mas os modelos de ciclos reais de negócios (CRN) também se tornaram um ponto de partida para muitas teorias nas quais os choques tecnológicos não desempenham um papel central.
+
+Além disso, os modelos baseados em CRN passaram a ser amplamente utilizados como laboratórios para análise de políticas em geral e para o estudo da política fiscal e monetária ótima em particular.\footnote{Veja Chari e Kehoe (1999) para uma revisão da literatura sobre política fiscal e monetária ótima em modelos CRN.} Essas aplicações de política refletiram o fato de que os modelos CRN representaram um passo importante para enfrentar o desafio lançado por Robert Lucas (Lucas (1980)) quando escreveu que “Uma das funções da economia teórica é fornecer sistemas econômicos artificiais totalmente articulados que possam servir como laboratórios nos quais políticas que seriam proibitivamente caras para experimentar em economias reais possam ser testadas a um custo muito menor. [...] Nossa tarefa, como eu a vejo [...] é escrever um programa FORTRAN que aceite regras de política econômica específicas como ‘entrada’ e gere como ‘saída’ estatísticas descrevendo as características operacionais das séries temporais que nos interessam, que são previstas como resultado dessas políticas.”
+
+Na próxima seção, reviso brevemente as propriedades dos modelos CRN. Teria sido fácil estender esta revisão para um levantamento completo da literatura. Mas resisto a essa tentação por duas razões. Primeiro, King e Rebelo (1999) já contêm uma discussão sobre a literatura de CRN. Segundo, e mais importante, a melhor maneira de celebrar os modelos CRN não é se deleitar com seu passado, mas considerar seu futuro. Assim, dedico a seção III a alguns dos desafios que a estrutura teórica construída sobre os fundamentos lançados por Kydland e Prescott em 1982 enfrenta. A Seção IV conclui.
+
+\section{Ciclos Reais de Negócios}
+
+Kydland e Prescott (1982) julgam seu modelo por sua capacidade de replicar as principais características estatísticas dos ciclos de negócios dos EUA. Essas características são resumidas em Hodrick e Prescott (1980) e são revisitadas em Kydland e Prescott (1990). Hodrick e Prescott retiram a tendência das séries temporais macroeconômicas dos EUA com o que ficou conhecido como o “filtro HP”. Eles então computam desvios padrão, correlações e correlações seriais dos principais agregados macroeconômicos.
+
+Os macroeconomistas conhecem suas principais descobertas de cor. O investimento é cerca de três vezes mais volátil que o produto, e o consumo de bens não duráveis é menos volátil que o produto. O total de horas trabalhadas e o produto têm volatilidade semelhante. Quase todas as variáveis macroeconômicas são fortemente pró-cíclicas, ou seja, mostram uma forte correlação contemporânea com o produto.\footnote{Uma exceção notável é a balança comercial, que é contracíclica. Veja Baxter e Crucinni (1993).} Finalmente, as variáveis macroeconômicas mostram persistência substancial. Se o produto está alto em relação à tendência neste trimestre, é provável que continue acima da tendência no próximo trimestre.
+
+Kydland e Prescott (1982) descobriram que os dados simulados de seu modelo mostram os mesmos padrões de volatilidade, persistência e comovimento presentes nos dados dos EUA. Essa descoberta é particularmente surpreendente, porque o modelo abstrai da política monetária, que economistas como Friedman (1968) consideram um elemento importante das flutuações comerciais.
+
+Em vez de reproduzir a tabela familiar de desvios padrão e correlações baseada em dados simulados, adoto uma estratégia alternativa para ilustrar o desempenho de um modelo CRN básico. Esta estratégia é semelhante à utilizada pelo Comitê de Datação de Ciclos de Negócios do National Bureau of Economic Research (NBER) para comparar diferentes recessões (veja Hall et al. (2003)) e aos métodos utilizados por Burns e Mitchell (1946) em seu estudo pioneiro das propriedades dos ciclos de negócios dos EUA.
+
+Começo simulando o modelo estudado em King, Plosser e Rebelo (1988) por 5.000 períodos, usando a calibração na Tabela 2, coluna 4 desse artigo. Este modelo é uma versão simplificada de Kydland e Prescott (1982). Ele elimina características que não são centrais para seus resultados principais: tempo de construção no investimento, utilidade não separável no lazer e choques tecnológicos que incluem tanto um componente permanente quanto um transitório. Eu retiro a tendência dos dados simulados com o filtro HP. Identifico recessões como períodos em que o produto está abaixo da tendência HP por pelo menos três trimestres consecutivos.\footnote{Curiosamente, a aplicação deste método aos dados dos EUA produz datas de recessão semelhantes às escolhidas pelo comitê de datação do NBER. As datas do NBER para o início de uma recessão e as datas obtidas com o procedimento HP (indicadas entre parênteses) são as seguintes: 1948-IV (1949-I), 1953-II (1953-IV), 1960-II (1960-III), 1969-IV (1970-I), 1973-III (1974-III), 1981-III (1981-IV), 1990-III (1990-IV) e 2001-I (2001-III). As datas do NBER incluem 1980-I, que não é selecionada pelo procedimento HP. Além disso, o procedimento HP inclui três recessões adicionais começando em 1962-III, 1986-IV, 1995-I. Nenhum dos últimos episódios envolveu uma queda no produto.}
+
+A Figura 1 mostra a recessão média gerada pelo modelo. Todas as variáveis são representadas como desvios de seu valor no trimestre em que a recessão começa, que chamo de período zero. Esta figura mostra que o modelo reproduz as características de primeira ordem dos ciclos de negócios dos EUA. Consumo, investimento e horas trabalhadas são todos pró-cíclicos. O consumo é menos volátil que o produto, o investimento é muito mais volátil que o produto e as horas trabalhadas são apenas ligeiramente menos voláteis que o produto. Todas as variáveis são persistentes. Uma nova informação que obtenho da Figura 1 é que as recessões no modelo duram cerca de um ano, assim como nos dados dos EUA.
+
+\section{Questões em Aberto na Pesquisa de Ciclos de Negócios}
+
+Começo observando brevemente dois desafios bem conhecidos para os modelos CRN. O primeiro é explicar o comportamento dos preços dos ativos. O segundo é compreender a Grande Depressão. Em seguida, discuto a pesquisa sobre as causas dos ciclos de negócios, o papel dos mercados de trabalho e as explicações para os fortes padrões de comovimento entre diferentes indústrias.
+
+\subsection*{O Comportamento dos Preços de Ativos}
+
+Os modelos de ciclos reais de negócios são comprovadamente bem-sucedidos em mimetizar o comportamento cíclico das quantidades macroeconômicas. No entanto, Mehra e Prescott (1985) mostram que as especificações de utilidade comuns nos modelos CRN têm implicações contrafactuais para os preços dos ativos. Essas especificações de utilidade não são consistentes com a diferença entre o retorno médio das ações e dos títulos. Este “enigma do prêmio de risco das ações” (\textit{equity premium puzzle}) gerou uma literatura volumosa, recentemente revisada por Mehra e Prescott (2003).
+
+Embora uma resolução geralmente aceita para o enigma do prêmio de risco das ações não esteja disponível no momento, muitos pesquisadores veem a introdução da formação de hábito como um passo importante para abordar algumas das dimensões de primeira ordem do enigma. Modelos de dotação ao estilo Lucas (1978), nos quais as preferências apresentam formas simples de formação de hábito, são consistentes com a diferença nos retornos médios entre ações e títulos. No entanto, esses modelos geram rendimentos de títulos que são voláteis demais em relação aos dados.\footnote{Os primeiros proponentes da formação de hábito como solução para o enigma do prêmio de risco das ações incluem Sundaresan (1989), Constantinides (1990) e Abel (1990). Veja Campbell e Cochrane (1999) para uma discussão recente sobre o papel da formação de hábito em modelos de precificação de ativos baseados no consumo.}
+
+Boldrin, Christiano e Fisher (2001) mostram que simplesmente introduzir a formação de hábito em um modelo CRN padrão não resolve o enigma do prêmio de risco das ações. As flutuações nos retornos das ações são muito pequenas, porque a oferta de capital é infinitamente elástica. A formação de hábito introduz um forte desejo por trajetórias de consumo suaves, mas essas trajetórias suaves podem ser alcançadas sem gerar flutuações nos retornos das ações. Boldrin et al. (2001) modificam o modelo CRN básico para reduzir a elasticidade da oferta de capital. Em seu modelo, bens de investimento e de consumo são produzidos em setores diferentes e existem fricções na realocação de capital e trabalho entre os setores. Como resultado, o desejo por consumo suave introduzido pela formação de hábito gera retornos de ações voláteis e um grande prêmio de risco das ações.
+
+\subsection*{O que Causou a Grande Depressão?}
+
+A Grande Depressão foi o evento macroeconômico mais importante do século XX. Muitos economistas interpretam o grande declínio do produto, a quebra do mercado de ações e a crise financeira que ocorreu entre 1929 e 1933 como uma falha massiva das forças de mercado que poderia ter sido evitada se o governo tivesse desempenhado um papel maior na economia. O aumento dramático nos gastos do governo como fração do PIB que vimos desde a década de 1930 é, em parte, uma resposta política à Grande Depressão.
+
+Retrospectivamente, parece plausível que a Grande Depressão tenha resultado de uma combinação incomum de choques ruins agravados por políticas ruins. A lista de choques inclui grandes quedas no preço mundial dos bens agrícolas, instabilidade no sistema financeiro e a pior seca já registrada. Políticas ruins abundaram. O banco central falhou em servir como emprestador de última instância, enquanto corridas bancárias forçavam o fechamento de muitos bancos dos EUA. A política monetária foi contracionista em plena recessão. A tarifa Smoot-Hawley de 1930, introduzida para proteger os agricultores do declínio nos preços agrícolas mundiais, desencadeou uma amarga guerra tarifária que paralisou o comércio internacional. O governo federal introduziu um aumento massivo de impostos através da Lei de Receita de 1932. A concorrência nos mercados de produtos e de trabalho foi minada por políticas governamentais que permitiram a conivência da indústria e aumentaram o poder de barganha dos sindicatos. Usar fontes de dados rudimentares para separar os efeitos desses diferentes choques e diferentes políticas é uma tarefa árdua, mas progressos significativos estão sendo feitos.\footnote{Veja Christiano, Motto e Rostagno (2005), Cole e Ohanian (1999, 2004) e a edição de janeiro de 2002 da \textit{Review of Economic Dynamics} e as referências nela contidas.}
+
+\subsection*{O que Causa os Ciclos de Negócios?}
+
+Uma das perguntas mais difíceis na macroeconomia é: quais são os choques que causam as flutuações comerciais? Suspeitos de longa data são os choques monetários, fiscais e de preços de petróleo. A esta lista Prescott (1986) adiciona choques de tecnologia e argumenta que eles “explicam mais de metade das flutuações no período pós-guerra com uma estimativa pontual próxima de 75\%”.
+
+A ideia de que choques tecnológicos são o motor central dos ciclos de negócios é controversa. Prescott (1986) computa a produtividade total dos fatores (PTF) e a trata como uma medida de choques tecnológicos exógenos. No entanto, há razões para desconfiar da PTF como uma medida de choques verdadeiros de tecnologia. A PTF pode ser prevista usando gastos militares (Hall (1988)) ou indicadores de política monetária (Evans (1992)), ambas variáveis que dificilmente afetariam a taxa de progresso técnico. Esta evidência sugere que a PTF, tal como computada por Prescott, não é um choque puramente exógeno, mas possui alguns componentes endógenos. A utilização variável do capital, considerada por Basu (1996) e Burnside, Eichenbaum e Rebelo (1996); a variabilidade no esforço de trabalho, considerada por Burnside, Eichenbaum e Rebelo (1993); e as mudanças nas taxas de \textit{markup}, consideradas por Jaimovich (2004a), criam importantes cunhas entre a PTF e os choques tecnológicos reais. Essas cunhas implicam que a magnitude dos choques tecnológicos reais é provavelmente muito menor do que a dos choques de PTF usados por Prescott.
+
+Burnside e Eichenbaum (1996), King e Rebelo (1999) e Jaimovich (2004a) argumentam que o fato de os choques tecnológicos reais serem menores do que os choques de PTF não implica que os choques tecnológicos sejam sem importância. Introduzir mecanismos como a utilização da capacidade e a variação do \textit{markup} em modelos CRN tem dois efeitos. Primeiro, esses mecanismos tornam os choques tecnológicos reais menos voláteis do que a PTF. Segundo, eles amplificam significativamente os efeitos dos choques tecnológicos. Essa amplificação permite que modelos com esses mecanismos gerem volatilidade do produto semelhante aos dados com choques tecnológicos muito menores.
+
+Outro aspecto controverso dos modelos CRN é o papel dos choques tecnológicos na geração de recessões. O comitê de datação de ciclos de negócios do NBER define uma recessão como “um declínio significativo na atividade econômica espalhado por toda a economia, durando mais de alguns meses, normalmente visível no PIB real, renda real, emprego, produção industrial e vendas no atacado e varejo” (Hall et al. (2003)). A Figura 2 mostra um histograma das taxas de crescimento trimestrais anualizadas do PIB real dos EUA. Em termos absolutos, o produto caiu em 15\% dos trimestres entre 1947 e 2005. A maioria dos modelos CRN requer declínios na PTF para replicar as quedas no produto observadas nos dados.\footnote{Uma exceção é o modelo proposto em King e Rebelo (1999), que minimiza a necessidade de declínios na PTF na geração de recessões. Este modelo requer fortes propriedades de amplificação resultantes de uma oferta de trabalho altamente elástica e da utilização do capital.} Os macroeconomistas geralmente concordam que as expansões no produto, pelo menos no médio a longo prazo, são impulsionadas por aumentos na PTF que derivam do progresso técnico. Em contraste, a noção de que as recessões são causadas por declínios na PTF encontra ceticismo substancial porque, interpretada literalmente, significa que as recessões são tempos de regresso tecnológico.
+
+Gali (1999) alimentou o debate sobre a importância dos choques tecnológicos como um impulso do ciclo de negócios. Gali usa um VAR estrutural que ele identifica assumindo que os choques tecnológicos são a única fonte de mudanças de longo prazo na produtividade do trabalho. Ele descobre que, no curto prazo, as horas trabalhadas caem em resposta a um choque positivo na tecnologia. Essa descoberta contradiz claramente as implicações dos modelos CRN básicos. King, Plosser e Rebelo (1988) e King (1991) discutem em detalhes a propriedade de que choques tecnológicos positivos aumentam as horas trabalhadas em modelos CRN. Os resultados de Gali desencadearam um debate animado e contínuo. Christiano, Eichenbaum e Vigfusson (2003) descobrem que os resultados de Gali não são robustos à especificação do VAR em termos de nível, em oposição à primeira diferença, das horas trabalhadas. Chari, Kehoe e McGrattan (2004) usam um modelo CRN que falha em satisfazer as suposições de identificação de Gali. O estudo deles mostra que as descobertas de Gali podem ser o resultado de má especificação.\footnote{Veja Gali e Rabanal (2005) para uma resposta às críticas em Chari, Kehoe e McGrattan (2004).} Basu, Fernald e Kimball (1999) e Francis e Ramey (2001) complementam os resultados de Gali. Eles os consideram robustos ao usar dados e especificações de VAR diferentes.
+
+\subsection*{Alternativas aos Choques de Tecnologia}
+
+O debate sobre o papel dos choques tecnológicos nas flutuações comerciais influenciou e inspirou a pesquisa sobre modelos nos quais os choques tecnológicos são menos importantes ou não desempenham papel algum. Geralmente, essas linhas de pesquisa foram fortemente influenciadas pelos métodos e ideias desenvolvidos na literatura de CRN. De fato, muitas dessas teorias alternativas tomam o modelo CRN básico como seu ponto de partida.
+
+\subsubsection*{Choques de Petróleo}
+
+Movimentos nos preços do petróleo e da energia estão frouxamente associados a recessões nos EUA (veja Barsky e Killian (2004) para uma discussão recente). Kim e Loungani (1992), Rotemberg e Woodford (1996) e Finn (2000) estudaram os efeitos dos choques nos preços da energia em modelos CRN. Esses choques melhoram o desempenho dos modelos CRN, mas não são uma causa principal das flutuações do produto. Embora os preços da energia sejam altamente voláteis, os custos de energia são pequenos demais como fração do valor adicionado para que as mudanças nos preços da energia tenham um impacto maior na atividade econômica.
+
+\subsubsection*{Choques Fiscais}
+
+Christiano e Eichenbaum (1992), Baxter e King (1993), Braun (1994) e McGrattan (1994), entre outros, estudaram o efeito de choques na taxa de impostos e nos gastos do governo em modelos CRN. Esses choques fiscais melhoram a capacidade dos modelos CRN de replicar tanto a variabilidade do consumo quanto das horas trabalhadas, e a baixa correlação entre horas trabalhadas e produtividade média do trabalho. Os choques fiscais também aumentam a volatilidade do produto gerada pelos modelos CRN. No entanto, não há variação cíclica suficiente nas taxas de impostos e nos gastos do governo para que os choques fiscais sejam uma fonte importante de flutuações comerciais.
+
+Embora os movimentos cíclicos nos gastos do governo sejam pequenos, os períodos de guerra são caracterizados por aumentos grandes e temporários nos gastos do governo. Pesquisadores como Ohanian (1997) mostram que os modelos CRN podem explicar as principais características macroeconômicas dos episódios de guerra: um declínio moderado no consumo, um grande declínio no investimento e um aumento nas horas trabalhadas. Essas características emergem naturalmente em um modelo CRN no qual os gastos do governo são financiados com impostos de montante fixo (\textit{lump sum}). Gastos governamentais adicionais têm que ser financiados por impostos mais cedo ou mais tarde. A riqueza das famílias declina devido ao aumento no valor presente das obrigações fiscais das famílias. Em resposta a esse declínio, as famílias reduzem seu consumo e aumentam o número de horas que trabalham, ou seja, reduzem seu lazer. Esse aumento nas horas trabalhadas produz um aumento moderado no produto. Como a utilidade marginal momentânea do consumo está diminuindo, as famílias preferem pagar os impostos relacionados à guerra reduzindo o consumo tanto hoje quanto no futuro. Dado que a redução no consumo hoje mais a expansão no produto são geralmente menores que o aumento nos gastos governamentais, há um declínio no investimento. Cooley e Ohanian (1997) usam um modelo CRN para comparar as implicações de bem-estar de diferentes estratégias de financiamento de guerra. Ramey e Shapiro (1998) consideram os efeitos de mudanças na composição dos gastos do governo. Burnside, Eichenbaum e Fisher (2004) estudam os efeitos de grandes aumentos temporários nos gastos do governo na presença de tributação distorciva.
+
+\subsubsection*{Mudança Técnica Específica ao Investimento}
+
+Uma alternativa natural aos choques de tecnologia é a mudança tecnológica específica ao investimento. Em modelos CRN padrão, um choque tecnológico positivo torna tanto o trabalho quanto o capital existente mais produtivos. Em contraste, o progresso técnico específico ao investimento não tem impacto na produtividade dos bens de capital antigos. Em vez disso, torna novos bens de capital mais produtivos ou menos caros, aumentando o retorno real do investimento.
+
+Podemos medir o ritmo da mudança tecnológica específica ao investimento usando o preço relativo dos bens de investimento em termos de bens de consumo. De acordo com dados construídos por Gordon (1990), esse preço relativo caiu drasticamente nos últimos 40 anos. Com base nessa observação, Greenwood, Hercowitz e Krusell (1997) usam métodos de contabilidade de crescimento para argumentar que 60\% do crescimento pós-guerra no produto por homem-hora se deve à mudança tecnológica específica ao investimento. Usando um VAR identificado por restrições de longo prazo, Fisher (2003) descobre que a mudança tecnológica específica ao investimento explica 50\% da variação nas horas trabalhadas e 40\% da variação no produto. Em contraste, ele descobre que os choques tecnológicos explicam menos de 10\% da variação tanto no produto quanto nas horas. Começando com Greenwood, Hercowitz e Krusell (2000), a mudança técnica específica ao investimento tornou-se um choque padrão incluído nos modelos CRN.
+
+\subsubsection*{Modelos Monetários}
+
+Há muitos estudos que exploram o papel dos choques monetários em modelos CRN que são estendidos para incluir elementos reais adicionais, bem como fricções nominais.\footnote{Veja, por exemplo, Dotsey, King e Wolman (1999), Altig, Christiano, Eichenbaum e Linde (2005) e Smets e Wouters (2003). Clarida, Gali e Gertler (1999) e Christiano, Eichenbaum e Evans (1999) fornecem revisões dessa literatura.} Pesquisadores como Bernanke, Gertler e Gilchrist (1999) enfatizam o papel das fricções de crédito em influenciar a resposta da economia aos choques tecnológicos e monetários. Outro elemento real importante é a concorrência monopolística, modelada nos moldes de Dixit e Stiglitz (1977). Nos modelos CRN básicos, as empresas e os trabalhadores são tomadores de preços em mercados perfeitamente competitivos. Nesse ambiente, não faz sentido pensar em empresas escolhendo preços ou trabalhadores escolhendo salários. A introdução da concorrência monopolística nos mercados de produtos e de trabalho confere às empresas e aos trabalhadores decisões de preços não triviais.
+
+As fricções nominais mais importantes introduzidas nos modelos monetários baseados em CRN são preços e salários rígidos (\textit{sticky prices and wages}). Nesses modelos, os preços são definidos por empresas que se comprometem a fornecer bens aos preços anunciados, e os salários são definidos por trabalhadores que se comprometem a fornecer mão de obra aos salários anunciados. Preços e salários só podem ser alterados periodicamente ou a um custo. Empresas e trabalhadores olham para frente, de modo que, ao definir preços e salários, levam em conta que pode ser muito caro, ou simplesmente impossível, alterar preços e salários no futuro próximo.
+
+Esta nova geração de modelos monetários baseados em CRN pode gerar respostas de impulso a um choque monetário que são semelhantes às respostas estimadas usando técnicas de VAR. Em muitos desses modelos, os choques tecnológicos continuam sendo importantes, mas as forças monetárias desempenham um papel significativo na moldagem da resposta da economia aos choques tecnológicos. De fato, tanto Altig, Christiano, Eichenbaum e Linde (2004) quanto Gali, Lopez-Salido e Valles (2004) descobrem que em seus modelos, um grande impacto expansionista de curto prazo de um choque tecnológico requer que a política monetária seja acomodatícia.
+
+\subsubsection*{Modelos de Equilíbrios Múltiplos}
+
+Muitos artigos examinam modelos que apresentam múltiplos equilíbrios de expectativas racionais. Pesquisas iniciais sobre equilíbrios múltiplos basearam-se fortemente em modelos de gerações sobrepostas, em parte porque esses modelos podem frequentemente ser estudados sem recorrer a métodos numéricos. Em contraste, o trabalho mais recente sobre equilíbrios múltiplos, discutido em Farmer (1999), toma o modelo CRN básico como ponto de partida e busca as modificações mais plausíveis que gerem equilíbrios múltiplos.
+
+Nos modelos CRN básicos, podemos calcular o equilíbrio competitivo como uma solução para um problema de planejamento côncavo. Este problema tem uma solução única, e assim o equilíbrio competitivo também é único. Quando introduzimos características como externalidades, retornos crescentes de escala ou concorrência monopolística, não podemos mais calcular o equilíbrio competitivo resolvendo um problema de planejamento côncavo. Portanto, essas características abrem as portas para a possibilidade de equilíbrios múltiplos. Versões iniciais de modelos de equilíbrios múltiplos baseados em CRN exigiam \textit{markups} implausivelmente altos ou grandes retornos crescentes de escala. No entanto, há uma safra recente de modelos de equilíbrios múltiplos que usam calibrações mais plausíveis (veja, por exemplo, Wen (1998a), Benhabib e Wen (2003) e Jaimovich (2004b)).
+
+Modelos de equilíbrios múltiplos têm duas características atraentes. Primeiro, como as crenças são autorrealizáveis, choques de crença podem gerar ciclos de negócios. Se os agentes se tornam pessimistas e pensam que a economia está entrando em recessão, a economia de fato desacelera. Segundo, modelos de equilíbrios múltiplos tendem a ter forte persistência interna, portanto, tais modelos não precisam de choques serialmente correlacionados para gerar séries temporais macroeconômicas persistentes. Começar com um modelo que tem um equilíbrio único e introduzir a multiplicidade significa reduzir o valor absoluto das raízes características de acima de um para abaixo de um. As raízes que mudam de fora para dentro do círculo unitário geralmente assumem valores absolutos próximos de um, gerando assim grande persistência interna.
+
+Os fortes mecanismos de persistência interna dos modelos de equilíbrios múltiplos são uma vantagem clara em relação aos modelos CRN padrão. Embora existam exceções, como o modelo proposto em Wen (1998b), a maioria dos modelos CRN tem baixa persistência interna (veja Cogley e Nason (1995) para uma discussão). A Figura 1 mostra que a dinâmica das diferentes variáveis se assemelha à dinâmica do choque tecnológico. Watson (1993) mostra que, como resultado da fraca persistência interna, os modelos CRN básicos não conseguem corresponder às propriedades da densidade espectral dos principais agregados macroeconômicos.
+
+Uma dificuldade importante com a geração atual de modelos de equilíbrios múltiplos é que eles exigem que as crenças sejam voláteis, mas coordenadas entre os agentes. Os agentes devem frequentemente mudar seus pontos de vista sobre o futuro, mas devem fazê-lo de maneira coordenada. Este interesse pelas crenças deu origem a uma literatura, pesquisada por Evans e Honkapohja (2001), que estuda o processo pelo qual os agentes aprendem sobre o ambiente econômico e formam suas expectativas sobre o futuro.
+
+\subsubsection*{Ciclos de Negócios Endógenos}
+
+A literatura sobre “ciclos de negócios endógenos” estuda modelos que geram flutuações comerciais, mas sem depender de choques exógenos. As flutuações resultam de uma dinâmica determinística complicada. Boldrin e Woodford (1990) observam que muitos desses modelos são baseados no modelo de crescimento neoclássico e, portanto, têm a mesma estrutura básica dos modelos CRN. Reichlin (1997) enfatiza duas dificuldades com esta linha de pesquisa. A primeira é que as trajetórias de previsão perfeita são extremamente complexas, levantando questões quanto à plausibilidade da suposição de previsão perfeita. A segunda é que modelos com ciclos determinísticos frequentemente exibem equilíbrios múltiplos, de modo que são suscetíveis à influência de choques de crença.
+
+\subsubsection*{Outras Linhas de Pesquisa}
+
+Termino descrevendo duas linhas de pesquisa promissoras que ainda estão em seus estágios iniciais. A primeira linha, discutida por Cochrane (1994), explora a possibilidade de que “choques de notícias” (\textit{news shocks}) possam ser motores importantes dos ciclos de negócios. Suponha que os agentes saibam que há uma nova tecnologia, como a internet, que estará disponível no futuro e que provavelmente terá um impacto significativo na produtividade futura. Essa notícia gera uma expansão hoje? Suponha que mais tarde o impacto dessa tecnologia seja menor do que o esperado anteriormente. Isso causa uma recessão? Beaudry e Portier (2004) mostram que os modelos CRN padrão não conseguem gerar comovimento entre consumo e investimento em resposta a notícias sobre a produtividade futura. Aumentos futuros na produtividade aumentam a taxa real de retorno do investimento e, ao mesmo tempo, geram um efeito riqueza positivo. Se o efeito riqueza domina, o consumo e o lazer aumentam, e as horas trabalhadas e o produto caem. Como o consumo aumenta e o produto cai, o investimento tem que cair. Se o efeito da taxa de retorno real domina, o que acontece para uma alta elasticidade de substituição intertemporal, então o investimento e as horas trabalhadas aumentam. No entanto, neste caso, o produto não aumenta suficientemente para acomodar o aumento no investimento, de modo que o consumo cai. Beaudry e Portier (2004) dão um primeiro passo importante ao propor um modelo que gera o comovimento correto em resposta a notícias sobre aumentos futuros na produtividade. Este modelo requer uma forte complementaridade entre bens duráveis e não duráveis e abstrai do capital como um insumo na produção de bens de investimento. Produzir alternativas ao modelo de Beaudry e Portier é um desafio interessante para pesquisas futuras.
+
+A segunda linha de pesquisa estuda os detalhes do processo de inovação e seu impacto na PTF. Comin e Gertler (2004) estendem um modelo CRN para incorporar mudanças endógenas na PTF e no preço do capital que resultam de pesquisa e desenvolvimento. Embora se concentrem em ciclos de médio prazo, sua análise provavelmente terá implicações em frequências mais altas. Mais geralmente, a pesquisa sobre a adoção e difusão de novas tecnologias provavelmente será importante na compreensão das expansões econômicas.
+
+\subsection*{Mercados de Trabalho}
+
+A maioria dos modelos de ciclo de negócios exige altas elasticidades de oferta de trabalho para gerar flutuações nos agregados de magnitude semelhante à observada nos dados. Nos modelos CRN, essas altas elasticidades são necessárias para corresponder à alta variabilidade das horas trabalhadas, juntamente com a baixa variabilidade das taxas salariais reais ou da produtividade do trabalho. Em modelos monetários, altas elasticidades de oferta de trabalho são necessárias para manter os custos marginais estáveis e reduzir os incentivos para as empresas alterarem os preços em resposta a um choque monetário. Modelos de equilíbrios múltiplos também dependem de altas elasticidades de oferta de trabalho. Se os agentes acreditam que a economia está entrando em um período de expansão, a taxa de retorno do investimento deve aumentar para justificar o alto nível de investimento necessário para que as crenças se autorrealizem. Este aumento nos retornos sobre o investimento é mais provável de ocorrer se trabalhadores adicionais puderem ser empregados sem um aumento substancial nas taxas de salários reais.
+
+Estudos microeconômicos estimam que a elasticidade da oferta de trabalho é baixa. Essas estimativas motivaram diversos autores a propor mecanismos que tornam uma alta elasticidade agregada da oferta de trabalho compatível com baixas elasticidades individuais. O mecanismo mais utilizado desse tipo foi proposto por Rogerson (1988) e implementado por Hansen (1985) em um modelo CRN. No modelo Hansen-Rogerson, o trabalho é indivisível, de modo que os trabalhadores têm que escolher entre trabalhar em tempo integral ou não trabalhar. Rogerson mostra que este modelo apresenta uma elasticidade agregada da oferta de trabalho muito alta que é independente da elasticidade individual. Esta propriedade resulta do fato de que, no modelo, toda a variação nas horas trabalhadas provém da margem extensiva, ou seja, de trabalhadores entrando e saindo da força de trabalho. A elasticidade da oferta de trabalho de um trabalhador individual (ou seja, a resposta à pergunta “se o seu salário aumentasse em um por cento, quantas horas a mais você escolheria trabalhar?”) é irrelevante, porque o número de horas trabalhadas não é uma variável de escolha.
+
+Em modelos monetários baseados em CRN, salários rígidos são frequentemente usados para gerar uma alta elasticidade de oferta de trabalho. Em modelos de salários rígidos, os salários nominais mudam apenas esporadicamente e os trabalhadores se comprometem a fornecer mão de obra aos salários anunciados. No curto prazo, as empresas podem empregar mais horas sem pagar taxas salariais mais elevadas. Mas quando as empresas o fazem, os trabalhadores estão fora de sua escala de oferta de trabalho, trabalhando mais horas do que gostariam, dado o salário que estão recebendo. Consequentemente, tanto o trabalhador quanto a empresa podem ficar em melhor situação renegociando para um nível eficiente de horas trabalhadas (veja Barro (1977) e Hall (2005) para uma discussão). Mais geralmente, os modelos de salários rígidos levantam a questão de se as taxas salariais são alocativas ao longo do ciclo de negócios. Podem as empresas realmente empregar trabalhadores por tantas horas quanto considerarem adequado à taxa salarial nominal vigente?
+
+Hall (2005) propõe um modelo de emparelhamento (\textit{matching model}) no qual salários rígidos podem ser um resultado de equilíbrio. Ele explora o fato de que em modelos de emparelhamento há um excedente a ser compartilhado entre o trabalhador e a empresa. A suposição convencional na literatura é que esse excedente é dividido por um processo de negociação de Nash (\textit{Nash bargaining}). Em vez disso, Hall assume que o excedente é alocado mantendo o salário nominal constante. Em seu modelo, os salários são rígidos desde que o salário nominal caia dentro do conjunto de negociação. No entanto, não há oportunidades para melhorar a posição da empresa ou do trabalhador renegociando o número de horas trabalhadas após um choque.
+
+A maioria dos modelos de ciclos de negócios adota uma descrição rudimentar do mercado de trabalho. As empresas contratam trabalhadores em mercados de trabalho spot competitivos e não há desemprego. O modelo Hansen-Rogerson gera desemprego. No entanto, uma característica pouco atraente do modelo é que a participação na força de trabalho é ditada por uma loteria que torna a escolha entre trabalhar e não trabalhar convexa.
+
+Dois tópicos de pesquisa importantes na interface entre macroeconomia e economia do trabalho são a compreensão do papel dos salários e da dinâmica do desemprego. Os macroeconomistas fizeram progressos significativos no último tópico. Modelos de busca e emparelhamento (\textit{search and matching models}), como o proposto por Mortensen e Pissarides (1994), surgiram como uma estrutura adequada para compreender não apenas a dinâmica do desemprego, mas também as propriedades das vagas e dos fluxos de entrada e saída da força de trabalho. Merz (1995), Andolfatto (1996), Alvarez e Veracierto (2000), Den Haan, Ramey e Watson (2000), Gomes, Greenwood e Rebelo (2001) e outros incorporaram a busca em modelos CRN. No entanto, como discutido por Shimer (2005), ainda há trabalho a ser feito na produção de um modelo que possa replicar os padrões de comovimento e volatilidade do desemprego, das vagas, dos salários e da produtividade média do trabalho presentes nos dados dos EUA.
+
+\subsection*{O que Explica o Comovimento do Ciclo de Negócios?}
+
+Um dos artigos pioneiros na literatura de CRN, Long e Plosser (1983), enfatiza o comovimento de diferentes setores da economia como uma característica importante dos ciclos de negócios. Esses autores propõem um modelo multissetorial que exibe um forte comovimento setorial. Long e Plosser obtêm uma solução analítica elegante para seu modelo assumindo que a utilidade momentânea é logarítmica e que a taxa de depreciação do capital é de 100 por cento. No entanto, muitas propriedades do modelo não se generalizam quando nos afastamos da suposição de depreciação total.
+
+As Figuras 3 e 4 mostram o forte comovimento entre o emprego em diferentes indústrias, conforme enfatizado por Christiano e Fitzgerald (1998).\footnote{Construí estas figuras usando dados mensais de janeiro de 1964 a abril de 2003. Eu retirei a tendência dos dados com o filtro HP, usando um valor de $\lambda$ de 14.400. Usei então os dados sem tendência para computar as correlações.} A Figura 3 mostra que, com exceção da mineração, a correlação entre as horas trabalhadas nos principais setores da economia dos EUA (construção, produtores de bens duráveis, produtores de bens não duráveis e serviços) e as horas privadas agregadas é de pelo menos 80 por cento. A correlação média é de 75 por cento. A Figura 4 mostra que este comovimento também está presente quando considero uma classificação mais desagregada de indústrias. A correlação média das horas totais trabalhadas em uma indústria e as horas totais trabalhadas no setor privado é de 68 por cento. A correlação entre as horas da indústria e o total de horas trabalhadas no setor privado é superior a cerca de 50, exceto em mineração, fumo, petróleo e carvão. Hornstein (2000) mostra que este comovimento setorial está presente em outras medidas de atividade econômica, como produto bruto, valor adicionado e uso de materiais e energia. Esses fortes padrões de comovimento setorial motivam Lucas (1977) a argumentar que os ciclos de negócios são impulsionados por choques agregados, não por choques específicos do setor.
+
+As Figuras 5 e 6 mostram que, como discutido em Carlino e Sill (1998) e Kouparitsas (2001), há um comovimento substancial entre as regiões dos EUA e entre diferentes países.\footnote{Computei as correlações relatadas na Figura 5 usando dados anuais do Bureau of Economic Analysis sobre o Produto Estadual Bruto (GSP) para o período 1977-1997. Uma descontinuidade na definição de GSP me impede de usar as observações de 1998-2003. Retirei a tendência dos dados com o filtro HP, usando um $\lambda$ de 100.} A correlação média entre o Produto Estadual Bruto real e o PIB real agregado para diferentes estados dos EUA é de 58 por cento, com apenas um pequeno número de estados exibindo correlação baixa ou negativa com o produto agregado. A Figura 6 mostra a correlação entre o PIB sem tendência dos EUA e dos países restantes no G7.\footnote{Computei estas correlações usando dados anuais para o período 1960-2000 do conjunto de dados de Heston, Summers e Aten (2002) para o G7 (os dados para a Alemanha são para o período 1970-1990). Retirei a tendência dos dados com o filtro HP, usando um $\lambda$ de 100.} A correlação média é de 46 por cento. Há um comovimento significativo entre os países, mas este comovimento é menos impressionante do que aquele entre indústrias dos EUA ou estados dos EUA. Backus e Kehoe (1992), Baxter (1995) e Ambler, Cardia e Zimmermann (2004) discutem esses padrões de comovimento internacional.
+
+À primeira vista, pode parecer que o comovimento entre diferentes indústrias é fácil de gerar se estivermos dispostos a assumir que há um choque de produtividade comum a todos os setores. No entanto, Christiano e Fitzgerald (1998) mostram que mesmo na presença de um choque comum, é difícil gerar comovimento entre indústrias que produzem bens de consumo e de investimento. Esta dificuldade resulta do fato de que, quando há um choque tecnológico, o investimento aumenta muito mais do que o consumo. Em um modelo padrão de dois setores, esta resposta ao choque implica que o trabalho deve se mover do setor de bens de consumo para o setor de investimento. Como resultado, as horas caem no setor de bens de consumo em tempos de expansão. Greenwood et al. (2000) mostram que o comovimento entre as indústrias de investimento e consumo também é difícil de gerar em modelos com mudança técnica específica ao investimento.
+
+Uma maneira natural de introduzir comovimento é incorporar uma estrutura de insumo-produto no modelo (veja, por exemplo, Hornstein e Praschnik (1997), Horvath (2000) e Dupor (1999)). No entanto, como as matrizes de insumo-produto são relativamente esparsas, as ligações intersetoriais não parecem ser fortes o suficiente para serem uma fonte principal de comovimento.
+
+Outras fontes potenciais de comovimento que merecem exploração adicional são os custos de movimentação de fatores de produção entre setores (Boldrin et al. (2001)) e salários rígidos (DiCecio (2003)).
+
+Os padrões de comovimento ilustrados nas Figuras 3 a 6 provavelmente contêm pistas importantes sobre os choques e mecanismos que geram os ciclos de negócios. Explorar as propriedades de comovimento dos modelos de ciclos de negócios é um tópico importante, mas pouco pesquisado, na macroeconomia.
+
+\section{Conclusão}
+
+Revoluções metodológicas como a liderada por Kydland e Prescott (1982) são raras. Elas propõem novos métodos, fazem novas perguntas e abrem as portas para pesquisas empolgantes. Tive muita sorte de ter sido um dos muitos jovens pesquisadores que tiveram a chance de participar do programa de pesquisa de Kydland-Prescott e de observar mais de perto a mecânica dos ciclos de negócios.
+
+\newpage
+
+\section*{Referências}
+
+\begin{enumerate}
+    \item Alvarez, Fernando e Veracierto, Marcelo “Labor Market Policies in an Equilibrium Search Model,” \textit{NBER Macroeconomics Annual 1999}, 14: 265-304, 2000.
+    \item Abel, Andrew “Asset Prices under Habit Formation and Catching up with the Joneses,” \textit{American Economic Review}, 80: 38—42, 1990.
+    \item Altig, David, Lawrence J. Christiano, Martin Eichenbaum, e Jesper Linde “Firm-Specific Capital, Nominal Rigidities and the Business Cycle,” mimeo, Northwestern University, 2004.
+    \item Ambler, Steve, Emanuela Cardia, e Christian Zimmermann “International Business Cycles: What are the Facts?,” \textit{Journal of Monetary Economics}, 51: 257-276, 2004.
+    \item Andolfatto, David “Business Cycles and Labor-Market Search,” \textit{American Economic Review}, 86: 112—132, 1996.
+    \item Backus, David e Patrick Kehoe “International Evidence on the Historical Properties of Business Cycles,” \textit{American Economic Review}, 82: 864-88, 1992.
+    \item Barsky, Robert e Lutz Kilian “Oil and the Macroeconomy Since the 1970s,” \textit{Journal of Economic Perspectives}, 18: 115—134, 2004.
+    \item Barro, Robert J. “Long-Term Contracting, Sticky Prices, and Monetary Policy,” \textit{Journal of Monetary Economics}, 3: 305—316, 1977.
+    \item Basu, Susanto “Procyclical Productivity, Increasing Returns or Cyclical Utilization?,” \textit{Quarterly Journal of Economics}, 111: 719-751, 1996.
+    \item Basu, Susanto, John Fernald, e Miles Kimball “Are Technology Improvements Contractionary?,” mimeo, University of Michigan, 1999.
+    \item Baxter, Marianne “International Trade and Business Cycles,” em G. Grossman e K. Rogoff (eds.) \textit{Handbook of International Economics}, vol. 3, 1801-64, Elsevier Science Publishers, B.V., Amsterdam, 1995.
+    \item Baxter, Marianne, e Mario Crucini “Explaining Saving-investment Correlations,” \textit{American Economic Review}, 83: 416—436, 1993.
+    \item Baxter, Marianne, e Robert King “Fiscal Policy in General Equilibrium,” \textit{American Economic Review}, 83: 315-334, 1993.
+    \item Beaudry, Paul e Franck Portier “An exploration into Pigou’s theory of cycles,” \textit{Journal of Monetary Economics}, 51: 1183-1216, 2004.
+    \item Benhabib, Jess e Yi Wen “Indeterminacy, Aggregate Demand, and the Real Business Cycles,” \textit{Journal of Monetary Economics}, 51: 503-530, 2003.
+    \item Bernanke, Ben, Mark Gertler e Simon Gilchrist “The Financial Accelerator in a Quantitative Business Cycle Framework,” \textit{Handbook of Macroeconomics}, editado por John B. Taylor e Michael Woodford, Amsterdam, New York e Oxford: Elsevier Science, North-Holland, 1341-93: 1999.
+    \item Boldrin, Michelle e Michael Woodford, “Equilibrium Models Displaying Endogenous Fluctuations and Chaos: A Survey,” \textit{Journal of Monetary Economics}, 25: 189-222, 1990.
+    \item Boldrin, Michelle, Lawrence J. Christiano, e Jonas Fisher “Habit Persistence, Asset Returns, and the Business Cycle,” \textit{American Economic Review}, 91: 149—166, 2001.
+    \item Braun, R. Anton “Tax Disturbances and Real Economic Activity in the Postwar United States,” \textit{Journal Of Monetary Economics}, 33: 441-462, 1994.
+    \item Burns, Arthur e Wesley Mitchell \textit{Measuring Business Cycles}, National Bureau of Economic Research, New York, 1946.
+    \item Burnside, Craig e Martin Eichenbaum “Factor-Hoarding and the Propagation of Business-Cycle Shocks,” \textit{American Economic Review}, 86: 1154—74, 1996.
+    \item Burnside, Craig, Martin Eichenbaum, e Jonas Fisher, “Assessing the Effects of Fiscal Shocks,” \textit{Journal of Economic Theory}, 115: 89-117, 2004.
+    \item Burnside, Craig, Martin Eichenbaum, e Sergio Rebelo, “Labor Hoarding and the Business Cycle,” \textit{Journal of Political Economy}, 101: 245-73, 1993.
+    \item Burnside, Craig, Martin Eichenbaum, e Sergio Rebelo “Sectoral Solow Residuals,” \textit{European Economic Review}, 40: 861-869, 1996.
+    \item Campbell, John e John Cochrane, “By Force of Habit: A Consumption-based Explanation of Aggregate Stock Market Behavior,” \textit{Journal of Political Economy}, 107: 205—251, 1999.
+    \item Carlino, Gerald e Keith Sill “The Cyclical Behavior of Regional Per Capita Income in the Post War Period,” mimeo, Federal Reserve Bank of Philadelphia, 1998.
+    \item Chari, V. V. e Kehoe, Patrick J., “Optimal Fiscal and Monetary Policy,” em John B. Taylor e Michael Woodford, eds., \textit{Handbook of Macroeconomics}, Amsterdam, The Netherlands: Elsevier Science, 1671-1745, 1999.
+    \item Chari, V. V., Patrick J. Kehoe, e Ellen McGrattan “Are Structural VARs Useful Guides for Developing Business Cycle Theories?,” Federal Reserve Bank of Minneapolis, Working Paper 631, 2004.
+    \item Christiano, Lawrence e Martin Eichenbaum, “Current Real Business Cycle Theories and Aggregate Labor Market Fluctuations,” \textit{American Economic Review}, 82: 430-50, 1992.
+    \item Christiano, Lawrence J. e Terry J. Fitzgerald. “The Business Cycle: It’s Still a Puzzle,” \textit{Federal Reserve Bank of Chicago Economic Perspectives}, 22: 56-83, 1998.
+    \item Christiano, Lawrence, Martin Eichenbaum, e Robert Vigfusson “What Happens After a Technology Shock?,” mimeo, Northwestern University, 2003.
+    \item Christiano, Lawrence J., Martin Eichenbaum, e Charles Evans “Monetary Policy Shocks: What Have We Learned and to What End?” em \textit{Handbook of Macroeconomics}, vol. 1A, editado por Michael Woodford e John Taylor, Amsterdam; New York e Oxford: Elsevier Science, North-Holland, 1999.
+    \item Christiano, Lawrence, Roberto Motto e Massimo Rostagno, “The Great Depression and the Friedman-Schwartz Hypothesis,” forthcoming, \textit{Journal of Money, Credit and Banking}, 2005.
+    \item Clarida, Richard, Jordi Gali, e Mark Gertler, “The Science of Monetary Policy: A New Keynesian Perspective,” \textit{Journal of Economic Literature}, 37: 1661-1707, 1999.
+    \item Cochrane, John H. “Shocks,” \textit{Carnegie-Rochester Conference Series on Public Policy}, 41: 295-364, 1994.
+    \item Cogley, Timothy e James Nason “Output Dynamics in Real Business Cycle Models,” \textit{American Economic Review}, 85: 492-511, 1995.
+    \item Cole, Harold L. e Lee E. Ohanian “The Great Depression in the United States From A Neoclassical Perspective,” \textit{Federal Reserve Bank of Minneapolis Quarterly Review}, 23: 2—24, 1999.
+    \item Cole, Harold L. e Lee E. Ohanian “New Deal Policies and the Persistence of the Great Depression: A General Equilibrium Analysis,” \textit{Journal of Political Economy}, 112: 779-816, 2004.
+    \item Cooley, Thomas F., e Lee E. Ohanian. “Postwar British Economic Growth and the Legacy of Keynes,” \textit{Journal of Political Economy}, 87: 23-40, 1997.
+    \item Comin, Diego e Mark Gertler “Medium Term Business Cycles,” mimeo New York University, 2004.
+    \item Constantinides, George “Habit Formation: A Resolution of the Equity Premium Puzzle,” \textit{Journal of Political Economy}, 98: 519—43, 1990.
+    \item Den Haan, Wouter, Garey Ramey, e Joel Watson “Job Destruction and Propagation of Shocks,” \textit{American Economic Review}, 90: 482—498, 2000.
+    \item DiCecio, Riccardo “Comovement: It’s Not a Puzzle,” mimeo, Northwestern University, November, 2003.
+    \item Dixit, Avinash e Joseph Stiglitz “Monopolistic Competition and Optimum Product Diversity,” \textit{American Economic Review}, 67: 297—308, 1977.
+    \item Dotsey, Michael, Robert G. King, e Alexander L. Wolman, “State-Dependent Pricing and the General Equilibrium Dynamics of Money and Output,” \textit{Quarterly Journal of Economics}, 114: 655-90, 1999.
+    \item Dupor, Bill, “Aggregation and Irrelevance in Multi-sector Models,” \textit{Journal of Monetary Economics} 43: 391—409, 1999.
+    \item Evans, Charles L., “Productivity Shocks and Real Business Cycles,” \textit{Journal of Monetary Economics} 29: 191-208, 1992.
+    \item Evans, George W. e Seppo Honkapohja \textit{Learning and Expectations in Macroeconomics}, Princeton University Press, 2001.
+    \item Farmer, Roger, \textit{Macroeconomics of Self-fulfilling Prophecies}, 2nd Edition, MIT Press, 1999.
+    \item Finn, Mary, “Perfect Competition and the Effects of Energy Price Increases on Economic Activity,” \textit{Journal of Money, Credit, and Banking} 32: 400-416, 2000.
+    \item Fisher, Jonas “Technology Shocks Matter,” mimeo, Federal Reserve Bank of Chicago, 2003.
+    \item Francis, Neville e Valerie Ramey “Is the Technology-Driven Real Business Cycle Hypothesis Dead? Shocks and Aggregate Fluctuations Revisited,” mimeo, University of California, San Diego, 2001.
+    \item Friedman, Milton “The Role of Monetary Policy,” \textit{The American Economic Review}, 58: 1-17, 1968.
+    \item Gali, Jordi “Technology, Employment, and the Business Cycle: Do Technology Shocks Explain Aggregate Fluctuations?,” \textit{American Economic Review}, 89: 249-271, 1999.
+    \item Gali, Jordi, David Lopez-Salido, e Javier Valles “Technology Shocks and Monetary Policy: Assessing the Fed’s Performance,” \textit{Journal of Monetary Economics}, 50: 723 - 743, 2004.
+    \item Gali, Jordi e Pau Rabanal “Technology Shocks and Aggregate Fluctuations: How Well Does the RBC Model Fit Postwar U.S. Data?,” forthcoming, \textit{NBER Macroeconomics Annual 2004}, 2005 MIT Press.
+    \item Gomes, Joao, Jeremy Greenwood, e Sergio Rebelo “Equilibrium Unemployment,” \textit{Journal of Monetary Economics}, 48: 109—152, 2001.
+    \item Gordon, Robert J. \textit{The Measurement of Durable Goods Prices}, University of Chicago Press for National Bureau of Economic Research, 1990.
+    \item Greenwood, Jeremy, Zvi Hercowitz, e Per Krusell “Long-Run Implications of Investment-Specific Technological Change,” \textit{American Economic Review}, 87: 342-362, 1997.
+    \item Greenwood, Jeremy, Zvi Hercowitz, e Per Krusell “The Role of Investment-specific Technological Change in the Business Cycle,” \textit{European Economic Review}, 44: 91-115, 2000.
+    \item Hall, Robert “The Relation Between Price and Marginal Cost in U.S. Industry,” \textit{Journal of Political Economy}, 96: 921-47, 1988.
+    \item Hall, Robert “Employment Fluctuations with Equilibrium Wage Stickiness,” forthcoming, \textit{American Economic Review}, 2005.
+    \item Hall, Robert, Martin Feldstein, Jeffrey Frankel, Robert Gordon, Christina Romer, David Romer, e Victor Zarnowitz “The NBER’s Recession Dating Procedure,” mimeo NBER, 2003.
+    \item Hansen, Gary D. “Indivisible Labor and the Business Cycle,” \textit{Journal of Monetary Economics}, 56: 309—327, 1985.
+    \item Heston, Alan, Robert Summers, e Bettina Aten, Penn World Table Version 6.1, Center for International Comparisons at the University of Pennsylvania, 2002.
+    \item Hodrick, Robert e Edward Prescott “Post-war Business Cycles: An Empirical Investigation,” Working Paper, Carnegie-Mellon University, 1980.
+    \item Hornstein, Andreas “The Business Cycle and Industry Comovement,” \textit{Federal Reserve Bank of Richmond Economic Quarterly} Volume 86/1 Winter 2000.
+    \item Hornstein, Andreas e Jack Praschnik “Intermediate Inputs and Sectoral Comovement in the Business Cycle,” \textit{Journal of Monetary Economics}, 40: 573—95, 1997.
+    \item Horvath, Michael, “Sectoral Shocks and Aggregate Fluctuations,” \textit{Journal of Monetary Economics} 45: 69—106, 2000.
+    \item Jaimovich, Nir “Firm Dynamics, Markup Variations, and the Business Cycle,” mimeo, University of California, San Diego, 2004a.
+    \item Jaimovich, Nir “Firm Dynamics and Markup Variations: Implications for Multiple Equilibria and Endogenous Economic Fluctuations,” University of California, San Diego, 2004b.
+    \item Kim, In-Moo e Prakash Loungani “The Role of Energy in Real Business Cycle Models,” \textit{Journal of Monetary Economics}, 29: 173-90, 1992.
+    \item King, Robert G. “Value and Capital in the Equilibrium Business Cycle Program,” em Lionel McKenzie e Stefano Zamagni, \textit{Value and Capital Fifty Years Later}, MacMillan (London), 1991.
+    \item King, Robert, Charles Plosser, e Sergio Rebelo “Production, Growth and Business Cycles: I. the Basic Neoclassical Model,” \textit{Journal of Monetary Economics}, 21: 195-232, 1988.
+    \item King, Robert G. e Sergio Rebelo “Resuscitating Real Business Cycles,” em John Taylor e Michael Woodford, eds., \textit{Handbook of Macroeconomics}, volume 1B, 928-1002, 1999.
+    \item Kouparitsas, Michael “Is the United States an Optimum Currency Area? An Empirical Analysis of Regional Business Cycles,” mimeo, Federal Reserve Bank of Chicago, 2001.
+    \item Kydland, Finn E. e Edward C. Prescott “Time to Build and Aggregate Fluctuations,” \textit{Econometrica} 50: 1345-1370, 1982.
+    \item Kydland, Finn E. e Edward C. Prescott “Business Cycles: Real Facts and a Monetary Myth,” \textit{Federal Reserve Bank of Minneapolis Quarterly Review}, 14: 3-18, 1990.
+    \item Long, John e Charles Plosser “Real Business Cycles,” \textit{Journal of Political Economy}, 91: 39-69, 1983.
+    \item Lucas, Robert E., Jr. “Asset Prices in an Exchange Economy,” \textit{Econometrica} 46: 1429—1445, 1978.
+    \item Lucas, Robert E., Jr., Understanding Business Cycles, em: K. Brunner e A. H. Meltzer, eds., \textit{Stabilization of the domestic and international economy}, \textit{Carnegie-Rochester Conference Series on Public Policy}, 5: 7-29, 1977.
+    \item Lucas, Robert E., Jr. “Methods and Problems in Business Cycle Theory,” \textit{Journal of Money, Credit, and Banking} 12: 696-715, 1980.
+    \item Lucas, Robert E., Jr., e Prescott, Edward C. “Investment under Uncertainty,” \textit{Econometrica}, 39: 659-81, 1971.
+    \item McGrattan, Ellen R., “The Macroeconomic Effects of Distortionary Taxation”, \textit{Journal of Monetary Economics}, 33: 573-601, 1994.
+    \item Mehra, Rajnish e Edward C. Prescott “The Equity Premium: A Puzzle,” \textit{Journal of Monetary Economics}, 15: 145-161, 1985.
+    \item Mehra, Rajnish e Edward C. Prescott “The Equity Premium in Retrospect,” em G. Constantinides, M. Harris e R. Stulz, \textit{Handbook of the Economics of Finance}, Elsevier, 2003.
+    \item Merz, Monika “Search in the Labor Market and the Real Business Cycle,” \textit{Journal of Monetary Economics}, 36: 269—300, 1995.
+    \item Mortensen, Dale e Christopher Pissarides, “Job Creation and Job Destruction in the Theory of Unemployment,” \textit{Review of Economic Studies} 61, 397-415, 1994.
+    \item Ohanian, Lee E. “The Macroeconomic Effects of War Finance in the United States: World War II and the Korean War,” \textit{American Economic Review}, 87: 23-40, 1997.
+    \item Prescott, Edward “Theory Ahead of Business-Cycle Measurement,” \textit{Carnegie-Rochester Conference Series on Public Policy}, 25: 11-44, 1986.
+    \item Ramey, Valerie A. e Matthew D. Shapiro “Costly Capital Reallocation and the Effects of Government Spending,” \textit{Carnegie-Rochester Conference Series on Public Policy}, 48: 145-194, 1998.
+    \item Reichlin, Pietro “Endogenous Cycles in Competitive Models: An Overview,” \textit{Studies in Nonlinear Dynamics and Econometrics}, 1:175—185, 1997.
+    \item Rogerson, Richard “Indivisible Labor, Lotteries and Equilibrium,” \textit{Journal of Monetary Economics}, 21: 3-16, 1988.
+    \item Rotemberg, Julio e Michael Woodford “Imperfect Competition and the Effect of Energy Price Increases on Economic Activity,” \textit{Journal of Money, Credit and Banking} 28: 549-577, 1996.
+    \item Shimer, Robert “The Cyclical Behavior of Equilibrium Unemployment and Vacancies,” forthcoming, \textit{American Economic Review}, 2005.
+    \item Smets, Frank, e Raf Wouters “An Estimated Dynamic Stochastic General Equilibrium Model of the Euro Area,” \textit{Journal of the European Economic Association} 1: 1123-1175, 2003.
+    \item Sundaresan, Suresh M., “Intertemporally Dependent Preferences and the Volatility of Consumption and Wealth,” \textit{Review of Financial Studies} 2: 73- 88, 1989.
+    \item Watson. Mark “Measures of Fit for Calibrated Models,” \textit{Journal of Political Economy}, 101: 1011-1041, 1993.
+    \item Wen, Yi, “Capacity Utilization Under Increasing Returns to Scale,” \textit{Journal of Economic Theory}, 81: 7-36, 1998a.
+    \item Wen, Yi “Can a Real Business Cycle Model Pass the Watson Test?,” \textit{Journal of Monetary Economics}, 42: 185-203, 1998b.
+\end{enumerate}
+
+\newpage
+
+\begin{center}
+\textbf{Figura 1: Uma Recessão Média em um Modelo de Ciclos Reais de Negócios}
+\end{center}
+
+\textit{[Espaço reservado para os quatro gráficos da Figura 1, representando Produto e Consumo, Produto e Investimento, Produto e Trabalho, e Produto e Choque Tecnológico.]}
+
+\vspace{1cm}
+
+\begin{center}
+\textbf{Figura 2: Histograma de Taxas de Crescimento Trimestrais (1947.I - 2004.IV)}
+\end{center}
+
+\textit{[Espaço reservado para o histograma da Figura 2.]}
+
+\vspace{1cm}
+
+\begin{center}
+\textbf{Figura 3: Correlação entre Horas Empregadas por Indústria e Total de Horas Empregadas pelo Setor Privado (Dados Mensais, 1964.1-2003.4, HP Filtrado, $\lambda = 14.400$)}
+\end{center}
+
+\textit{[Espaço reservado para o gráfico de barras da Figura 3: Mineração, Construção, Manufatura de Bens Duráveis, Manufatura de Bens Não Duráveis e Serviços.]}
+
+\vspace{1cm}
+
+\begin{center}
+\textbf{Figura 4: Correlação entre Horas Empregadas por Indústria e Total de Horas Empregadas pelo Setor Privado (Dados Mensais, 1964.1-2003.4, HP Filtrado, $\lambda = 14.400$)}
+\end{center}
+
+\textit{[Espaço reservado para o gráfico detalhado por setores industriais da Figura 4.]}
+
+\vspace{1cm}
+
+\begin{center}
+\textbf{Figura 5: Comovimento entre Estados dos EUA - Correlação entre o Produto Estadual Bruto Real e o PIB Real Agregado dos EUA (Dados Anuais, 1977-1997, HP Filtrado, $\lambda=100$)}
+\end{center}
+
+\textit{[Espaço reservado para o gráfico por estados da Figura 5.]}
+
+\vspace{1cm}
+
+\begin{center}
+\textbf{Figura 6: Comovimento de Diferentes Países com os EUA - Correlação entre o PIB Real do País e o PIB Real dos EUA (Dados Anuais 1960-2000, HP Filtrado, $\lambda = 100$)}
+\end{center}
+
+\textit{[Espaço reservado para o gráfico da Figura 6: Canadá, França, Reino Unido, Itália, Japão e Alemanha.]}
+
+\end{document}
