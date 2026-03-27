@@ -1,0 +1,22 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Traduzir todos os PDFs",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "scripts/batch_translate_pdfs.py",
+        "input",
+        "--output-dir",
+        "output",
+        "--recursive",
+        "--overwrite"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    }
+  ]
+}
